@@ -1,0 +1,126 @@
+@layer anime {
+  .character {
+    position: absolute;
+    bottom: 8%;
+    left: 5%;
+    width: 100px;
+    height: 160px;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-80px) scale(0.8);
+    transition: opacity 0.6s ease;
+    will-change: transform, opacity;
+  }
+
+  .character--visible {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+  .character__svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .char-arm--left {
+    transform-origin: 36px 46px;
+    animation: swingLeft 0.4s ease-in-out infinite alternate;
+  }
+
+  .char-arm--right {
+    transform-origin: 64px 46px;
+    animation: swingRight 0.4s ease-in-out infinite alternate;
+  }
+
+  .char-leg--left {
+    transform-origin: 38px 68px;
+    animation: stepLeft 0.4s ease-in-out infinite alternate;
+  }
+
+  .char-leg--right {
+    transform-origin: 62px 68px;
+    animation: stepRight 0.4s ease-in-out infinite alternate;
+  }
+
+  .character--idle .char-arm--left,
+  .character--idle .char-arm--right,
+  .character--idle .char-leg--left,
+  .character--idle .char-leg--right {
+    animation-play-state: paused;
+  }
+
+  @keyframes swingLeft {
+    0%   { transform: rotate(-8deg); }
+    100% { transform: rotate(8deg); }
+  }
+
+  @keyframes swingRight {
+    0%   { transform: rotate(8deg); }
+    100% { transform: rotate(-8deg); }
+  }
+
+  @keyframes stepLeft {
+    0%   { transform: rotate(-12deg) translateY(0); }
+    100% { transform: rotate(12deg) translateY(-2px); }
+  }
+
+  @keyframes stepRight {
+    0%   { transform: rotate(12deg) translateY(0); }
+    100% { transform: rotate(-12deg) translateY(-2px); }
+  }
+
+  .character__svg .char-eyes {
+    animation: blink 3s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 95%, 100% { transform: scaleY(1); }
+    97% { transform: scaleY(0.1); }
+  }
+
+  .glitch {
+    position: relative;
+  }
+
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .glitch::before {
+    color: var(--color-secondary);
+    z-index: -1;
+    animation: glitch-offset 3s infinite linear alternate-reverse;
+  }
+
+  .glitch::after {
+    color: var(--color-accent);
+    z-index: -1;
+    animation: glitch-offset 2s infinite linear alternate-reverse;
+  }
+
+  @keyframes glitch-offset {
+    0%   { transform: translate(0); }
+    20%  { transform: translate(-2px, 1px); }
+    40%  { transform: translate(2px, -1px); }
+    60%  { transform: translate(-1px, -2px); }
+    80%  { transform: translate(1px, 2px); }
+    100% { transform: translate(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .character { display: none; }
+    .section__bg-canvas { display: none; }
+    .transition-overlay { display: none; }
+    .scroll-hint { display: none; }
+    .glitch::before,
+    .glitch::after { display: none; }
+    .skill-bar__fill { width: var(--skill-width) !important; }
+  }
+}

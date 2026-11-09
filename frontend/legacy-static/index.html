@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Modern portfolio website of Rabin Humagain. Full stack developer, backend enthusiast, React developer, Node.js developer, and computer engineering student from Nepal." />
+  <meta name="keywords" content="Rabin Humagain, Full Stack Developer, React Developer, Node Developer, Portfolio Website, Backend Enthusiast, Nepal" />
+  <meta name="author" content="Rabin Humagain" />
+  <meta name="theme-color" content="#6C5CE7" />
+  <meta property="og:title" content="Rabin Humagain | Full Stack Developer" />
+  <meta property="og:description" content="Full stack developer, backend enthusiast, React developer, Node.js developer, and computer engineering student from Nepal." />
+  <meta property="og:image" content="/profile.jpeg" />
+  <meta property="og:url" content="https://rabin-portfolio.vercel.app" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rabin Humagain Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rabin Humagain | Full Stack Developer" />
+  <meta name="twitter:description" content="Full stack developer, backend enthusiast, and computer engineering student from Nepal." />
+  <meta name="twitter:image" content="/profile.jpeg" />
+  <title>Rabin Humagain | Full Stack Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/anime.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="navbar" role="banner">
+    <nav class="navbar__inner" aria-label="Main navigation">
+      <a href="#home" class="navbar__logo" aria-label="Home">RABIN</a>
+      <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar__links" role="list">
+        <li><a href="#home" class="navbar__link" aria-current="page">Home</a></li>
+        <li><a href="#about" class="navbar__link">About</a></li>
+        <li><a href="#skills" class="navbar__link">Skills</a></li>
+        <li><a href="#certifications" class="navbar__link">Certifications</a></li>
+        <li><a href="#projects" class="navbar__link">Projects</a></li>
+        <li><a href="#contact" class="navbar__link">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-toggle__icon">🌙</span>
+      </button>
+    </nav>
+  </header>
+
+  <canvas class="section__bg-canvas" aria-hidden="true"></canvas>
+
+  <main class="sections-container" id="main-content">
+
+    <!-- HOME -->
+    <section id="home" class="section section--full" aria-label="Home">
+      <div class="section__content">
+        <p class="section__greeting">Hi, I'm</p>
+        <h1 class="section__title glitch" data-text="Rabin Humagain">Rabin Humagain</h1>
+        <p class="section__tagline hero-roles">Computer Engineering Student &bull; Full Stack Developer &bull; Backend Enthusiast &bull; Linux Learner</p>
+        <p class="section__subtitle hero-bio">Motivated and self-driven Computer Engineering student with interest in software development, networking, Linux systems, and modern web technologies. I enjoy building full-stack applications, learning new technologies, and solving real-world problems through code.</p>
+        <div class="section__actions">
+          <a href="#projects" class="btn btn--primary">View My Work</a>
+          <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+        </div>
+      </div>
+      <div class="character" id="walk-character" aria-hidden="true">
+        <svg viewBox="0 0 100 160" class="character__svg" xmlns="http://www.w3.org/2000/svg">
+          <g id="character-body">
+            <circle cx="50" cy="25" r="18" fill="var(--color-accent)" class="char-head"/>
+            <ellipse cx="50" cy="33" rx="8" ry="4" fill="var(--color-bg)" class="char-eyes"/>
+            <path d="M42 18 Q50 14 58 18" stroke="var(--color-text)" fill="none" stroke-width="1.5" class="char-hair"/>
+            <rect x="35" y="42" width="30" height="35" rx="4" fill="var(--color-primary)" class="char-torso"/>
+            <rect x="32" y="62" width="12" height="28" rx="3" fill="var(--color-secondary)" class="char-leg char-leg--left"/>
+            <rect x="56" y="62" width="12" height="28" rx="3" fill="var(--color-secondary)" class="char-leg char-leg--right"/>
+            <rect x="31" y="42" width="10" height="24" rx="3" fill="var(--color-primary-light)" class="char-arm char-arm--left"/>
+            <rect x="59" y="42" width="10" height="24" rx="3" fill="var(--color-primary-light)" class="char-arm char-arm--right"/>
+          </g>
+        </svg>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="scroll-hint__text">Scroll</span>
+        <span class="scroll-hint__arrow">↓</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section--full" aria-label="About me">
+      <div class="section__content">
+        <h2 class="section__heading"><span class="text--accent">01.</span> About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="about-bio">Motivated and self-driven Computer Engineering student with interest in software development, networking, Linux systems, and modern web technologies. I enjoy building full-stack applications, learning new technologies, and solving real-world problems through code.</p>
+            <div class="about-tags">
+              <span class="about-tag">Full Stack Dev</span>
+              <span class="about-tag">Backend Enthusiast</span>
+              <span class="about-tag">Linux Learner</span>
+            </div>
+          </div>
+          <div class="education-timeline">
+            <div class="education-item">
+              <div class="education-dot"></div>
+              <span class="education-period">Passed 2073</span>
+              <h3 class="education-level">SEE</h3>
+              <p class="education-institution">Shree Karthari Secondary School</p>
+              <p class="education-desc">Completed secondary education with a focus on basic sciences and mathematics.</p>
+            </div>
+            <div class="education-item">
+              <div class="education-dot"></div>
+              <span class="education-period">2074 &ndash; 2076</span>
+              <h3 class="education-level">+2 Science</h3>
+              <p class="education-institution">Balnikital Higher Secondary School</p>
+              <p class="education-desc">Higher secondary education in the science stream, building foundation for engineering.</p>
+            </div>
+            <div class="education-item">
+              <div class="education-dot"></div>
+              <span class="education-period">2081 &ndash; Present</span>
+              <h3 class="education-level">Bachelor in Computer Engineering</h3>
+              <p class="education-institution">ISMT College</p>
+              <p class="education-desc">Pursuing a degree in Computer Engineering with coursework in programming, networking, and systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section--full" aria-label="Skills">
+      <div class="section__content">
+        <h2 class="section__heading"><span class="text--accent">02.</span> Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="skill-category__title">Languages &amp; Frameworks</h3>
+            <div class="skill-category__items">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">.NET Framework</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category__title">Development Concepts</h3>
+            <div class="skill-category__items">
+              <span class="skill-tag">CRUD Operations</span>
+              <span class="skill-tag">OOP</span>
+              <span class="skill-tag">Abstraction</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category__title">Tools &amp; Version Control</h3>
+            <div class="skill-category__items">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category__title">Systems &amp; Infrastructure</h3>
+            <div class="skill-category__items">
+              <span class="skill-tag">Windows</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Networking</span>
+              <span class="skill-tag">Hardware Troubleshooting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section section--full" aria-label="Certifications">
+      <div class="section__content">
+        <h2 class="section__heading"><span class="text--accent">03.</span> Certifications</h2>
+        <p class="section__subtitle">Professional training and technical certifications.</p>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <h3 class="cert-card__title">Cisco Networking Academy</h3>
+            <p class="cert-card__desc">Networking and cybersecurity fundamentals certification covering routing, switching, and network security principles.</p>
+          </div>
+          <div class="cert-card">
+            <h3 class="cert-card__title">Computer Hardware Training Level 2</h3>
+            <p class="cert-card__desc">Hardware troubleshooting and system maintenance training focused on diagnostics, repair, and component-level understanding.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section--full" aria-label="Projects">
+      <div class="section__content">
+        <h2 class="section__heading"><span class="text--accent">04.</span> Projects</h2>
+        <p class="section__subtitle">My work including open-source repositories on <a href="https://github.com/rabin0811" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+        <div class="projects-grid" id="projects-grid">
+          <article class="project-card">
+            <div class="project-card__thumb" aria-hidden="true">
+              <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+                <rect width="280" height="160" fill="var(--color-surface)" rx="8"/>
+                <rect x="20" y="20" width="200" height="12" rx="3" fill="var(--color-primary)"/>
+                <rect x="20" y="44" width="160" height="8" rx="2" fill="var(--color-muted)" opacity="0.3"/>
+                <rect x="20" y="60" width="140" height="8" rx="2" fill="var(--color-muted)" opacity="0.2"/>
+                <rect x="20" y="90" width="100" height="30" rx="4" fill="var(--color-accent)" opacity="0.2"/>
+              </svg>
+            </div>
+            <h3 class="project-card__title">Job Portal Management System</h3>
+            <p class="project-card__desc">Built using .NET Framework with CRUD operations and object-oriented programming concepts including abstraction.</p>
+            <div class="project-card__tags">
+              <span class="tag">.NET</span>
+              <span class="tag">CRUD</span>
+              <span class="tag">OOP</span>
+            </div>
+            <div class="project-card__actions">
+              <a href="https://github.com/rabin0811/job-portal" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">GitHub</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__thumb" aria-hidden="true">
+              <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+                <rect width="280" height="160" fill="var(--color-surface)" rx="8"/>
+                <rect x="20" y="20" width="120" height="12" rx="3" fill="var(--color-secondary)"/>
+                <rect x="20" y="44" width="40" height="40" rx="4" fill="var(--color-secondary)" opacity="0.3"/>
+                <rect x="70" y="44" width="40" height="40" rx="4" fill="var(--color-primary)" opacity="0.3"/>
+                <rect x="120" y="44" width="40" height="40" rx="4" fill="var(--color-accent)" opacity="0.3"/>
+                <rect x="20" y="120" width="240" height="8" rx="2" fill="var(--color-muted)" opacity="0.2"/>
+              </svg>
+            </div>
+            <h3 class="project-card__title">Full Stack Portfolio</h3>
+            <p class="project-card__desc">Modern full stack portfolio with React, Node.js, Express, Prisma, PostgreSQL, JWT auth, admin dashboard, and blog management.</p>
+            <div class="project-card__tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Prisma</span>
+            </div>
+            <div class="project-card__actions">
+              <a href="https://github.com/rabin0811/rabin-portfolio" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--full" aria-label="Contact">
+      <div class="section__content">
+        <h2 class="section__heading"><span class="text--accent">05.</span> Get In Touch</h2>
+        <p class="section__subtitle">Have a project in mind or just want to say hi? Let's connect.</p>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required minlength="2" placeholder="Your name" autocomplete="name" />
+              <span class="form-field__error" role="alert"></span>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email" />
+              <span class="form-field__error" role="alert"></span>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required minlength="10" rows="5" placeholder="Tell me about your project or idea..."></textarea>
+            <span class="form-field__error" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg">
+            <span class="btn__text">Send Message</span>
+            <span class="btn__spinner" aria-hidden="true"></span>
+          </button>
+          <div class="form-toast" role="alert" aria-live="polite" hidden></div>
+        </form>
+        <div class="contact-socials">
+          <a href="https://github.com/rabin0811" class="social-link social-link--github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/rabin-humagain-417a35410" class="social-link social-link--linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://facebook.com/rabin.humagai" class="social-link social-link--facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://instagram.com/__ra_bin__" class="social-link social-link--instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="transition-overlay" aria-hidden="true"></div>
+
+  <footer class="footer" role="contentinfo">
+    <p>&copy; 2026 Rabin Humagain. Designed &amp; built with <span aria-label="love">&hearts;</span> &mdash; <a href="http://localhost:5000/admin" class="footer__admin">Admin</a></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script type="module" src="js/profile.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
